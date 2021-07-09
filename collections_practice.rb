@@ -44,6 +44,7 @@ def sum_array(array)
     end
 end
 
+# why do i need to do each_with_index.collect/each? instead of each_with_index only?
 def add_s(array)
     array.each_with_index.collect do |word, index|
         if index == 1
