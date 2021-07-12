@@ -46,10 +46,10 @@ end
 
 # why do i need to do each_with_index.collect/each? instead of each_with_index only?
 def add_s(array)
-    array.each_with_index.collect do |word, index|
-        if index == 1
+    array.collect.with_index(1) do |word, index|
+        if index == 2
             word = word
-        elsif index != 1
+        else
             word << "s"
         end
     end
